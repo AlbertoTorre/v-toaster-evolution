@@ -29,21 +29,21 @@ Usage
 ```js
 import Vue from 'vue'
 
-import Toaster from 'v-toaster-evolution'
+import ToasterE from 'v-toaster-evolution'
 
 // You need a specific loader for CSS files like https://github.com/webpack/css-loader
 import 'v-toaster/dist/v-toaster.css'
 
 // optional set default imeout, the default is 10000 (10 seconds).
-Vue.use(Toaster, {timeout: 5000})
+Vue.use(ToasterE, {timeout: 5000})
 ```
 
 ### Browser
 
 ```html
 <!-- Include after Vue -->
-<link rel="stylesheet" href="v-toaster/dist/v-toaster.css"></link>
-<script src="v-toaster/dist/v-toaster.js"></script>
+<link rel="stylesheet" href="v-toaster-evolution/dist/v-toaster-evolution.css"></link>
+<script src="v-toaster-evolution/dist/v-toaster-evolution.js"></script>
 <script>
   Vue.use(VToaster, {timeout: 5000})
 </script>
@@ -54,17 +54,20 @@ Vue.use(Toaster, {timeout: 5000})
 ```js
 // in your component this.$toaster
 // ...
-this.$toaster.success('Your toaster success message.')
+this.$toasterE.success('Your toaster success message.')
 // or custom timeout
-this.$toaster.success('Your toaster success message.', {timeout: 8000})
+this.$toasterE.success('Your toaster success message.', {timeout: 8000})
 
-this.$toaster.info('Your toaster info message.')
-this.$toaster.error('Your toaster error message.')
-this.$toaster.warning('Your toaster warning message.')
+this.$toasterE.info('Your toaster info message.')
+this.$toasterE.error('Your toaster error message.')
+this.$toasterE.warning('Your toaster warning message.')
 
 // or custom add method
-this.$toaster.add('Your toaster theme message.', {theme: 'info', timeout: 10000})
-this.$toaster.add('Your toaster theme message.', {theme: 'info', timeout: 10000, mark:3})
+this.$toasterE.add('Your toaster theme message.', {theme: 'v-toast-info', timeout: 10000})
+
+//or custom add method with mark
+this.$toasterE.add('Load Document...', {theme: 'v-toast-info', timeout: 10000, mark:3})
+this.$toasterE.add('Process Complete', {theme: 'v-toast-success', timeout: 1000, mark:3})
 // ...
 ```
 

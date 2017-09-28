@@ -1,15 +1,15 @@
 {
-  "name": "v-toaster",
+  "name": "v-toaster-evolution",
   "version": "1.0.2",
   "description": "A Vue.js component",
-  "author": "Marcos Paliari <marcos@paliari.com.br>",
-  "main": "dist/v-toaster.js",
+  "author": "AlbertoTorre <albertochoatorres@gmail.com>",
+  "main": "dist/v-toaster-evolution.js",
   "license": {
     "type": "MIT",
     "url": "http://www.opensource.org/licenses/mit-license.php"
   },
   "scripts": {
-    "dist": "vue build ./src/v-toaster.js --config ./build.config.js --dist ./dist/ --prod --lib",
+    "dist": "vue build ./src/v-toaster-evolution.js --config ./build.config.js --dist ./dist/ --prod --lib",
     "dist:demo": "vue build ./demo/index.js --config ./demo/build.config.js --dist ./docs/ --prod",
     "build": "npm run dist -- --disable-compress",
     "start": "npm run dev",
@@ -29,23 +29,23 @@
     "vue-toaster",
     "v-toast",
     "toaster-vue",
-    "toast-vue"
+    "toast-vue",
+    "vue-notification",
+    "v-notification",
+    "notification"
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/paliari/v-toaster.git"
+    "url": "git+https://github.com/AlbertoTorre/v-toaster-evolution.git"
   },
   "bugs": {
-    "url": "https://github.com/paliari/v-toaster/issues"
+    "url": "https://github.com/AlbertoTorre/v-toaster-evolution/issues"
   },
-  "homepage": "https://github.com/paliari/v-toaster#readme",
+  "homepage": "https://github.com/AlbertoTorre/v-toaster-evolution#readme",
   "devDependencies": {
     "pug": "^2.0.0-rc.4",
     "stylus": "^0.54.5",
     "stylus-loader": "^3.0.1",
     "vue-cli": "^2.8.2"
-  },
-  "dependencies": {
-    "pug": "^2.0.0-rc.4"
   }
 }

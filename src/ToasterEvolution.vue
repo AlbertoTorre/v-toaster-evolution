@@ -1,5 +1,5 @@
 <template lang="pug">
-.v-toaster
+.v-toaster-evolution
   transition-group(name='v-toast')
     .v-toast(:class="{[t.theme]: t.theme}", v-for='t in items', :key='t.key')
       a.v-toast-btn-clear(@click='remove(t)')
@@ -77,7 +77,7 @@ toast-varient-style(color)
   text-align center
   line-height 30px
 
-.v-toaster
+.v-toaster-evolution
   position fixed
   top 50px
   right 0
@@ -133,6 +133,6 @@ toast-varient-style(color)
       &::before
         content "\2715"
 @media (max-width: 300px)
-  .v-toaster
+  .v-toaster-evolution
     width 100%
 </style>

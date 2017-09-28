@@ -11,15 +11,15 @@ div.toaster-demo(style='text-align: center;')
       option(value='v-toast-error') error
     button.btn(@click='show', :class='{[theme]: true}') show
   p
-    button.btn.v-toast-info(@click='$toaster.info(message, {})') info
-    button.btn.v-toast-success(@click='$toaster.success(message)') success
-    button.btn.v-toast-warning(@click='$toaster.add(message, {theme:"warning", mark:8})') warning
-    button.btn.v-toast-error(@click='$toaster.error(message)') error
+    button.btn.v-toast-info(@click='$toasterE.info(message, {})') info
+    button.btn.v-toast-success(@click='$toasterE.success(message)') success
+    button.btn.v-toast-warning(@click='$toasterE.add(message, {theme:"v-toast-warning", mark:8})') warning
+    button.btn.v-toast-error(@click='$toasterE.error(message)') error
 </template>
 
 <script>
 import Vue from 'vue'
-import Toaster from '../src/v-toaster.js'
+import Toaster from '../src/v-toaster-evolution.js'
 Vue.use(Toaster)
 
 export default {
@@ -31,7 +31,7 @@ export default {
   },
   methods: {
     show () {
-      this.$toaster.add(this.message, {theme: this.theme,mark:6})
+      this.$toasterE.add(this.message, {theme: this.theme,mark:6})
     },
   },
 }
