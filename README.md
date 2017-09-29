@@ -18,7 +18,7 @@ Installation
 
 Demo
 ----
-El mismo que este pero con css y una funcionalidad adicional.
+El mismo que el v-toaster, pero adicionandole algunas funcionalidades.
 [DEMO](http://albertotorre.github.io/v-toaster-evolution/demo-evolution)
 
 Usage
