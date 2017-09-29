@@ -19,7 +19,7 @@ Installation
 Demo
 ----
 El mismo que este pero con css y una funcionalidad adicional.
-[DEMO](http://albertotorre.github.io/v-toaster-evolution)
+[DEMO](http://albertotorre.github.io/v-toaster-evolution/demo-evolution)
 
 Usage
 -----

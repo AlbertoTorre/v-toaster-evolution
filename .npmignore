@@ -1,0 +1,13 @@
+node_modules
+src
+test
+bin
+demo
+demo-evolution
+Gruntfile.coffee
+npm-debug.log
+.envrc
+.gitignore
+buid.config.js
+yarn.lock
+.git
