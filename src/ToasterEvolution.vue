@@ -3,7 +3,8 @@
   transition-group(name='v-toast')
     .v-toast(:class="{[t.theme]: t.theme}", v-for='t in items', :key='t.key')
       a(:class="{[t.theme+'-btn-clear']: t.theme+'-btn-clear'}",@click='remove(t)')
-      | {{t.message}}
+      span(v-if="t.html", v-html="t.message")
+      span(v-if="!t.html") {{t.message}}
 </template>
 
 <script>
@@ -16,12 +17,13 @@ export default {
     }
   },
   methods: {
-    success (message, option = {}) { this.add(message, {theme: 'v-toast-success', timeout: option.timeout, mark:option.mark } ) },
-    info    (message, option = {}) { this.add(message, {theme: 'v-toast-info',    timeout: option.timeout, mark:option.mark } ) },
-    warning (message, option = {}) { this.add(message, {theme: 'v-toast-warning', timeout: option.timeout, mark:option.mark } ) },
-    error   (message, option = {}) { this.add(message, {theme: 'v-toast-error',   timeout: option.timeout, mark:option.mark } ) },
+    success(message, option = {}) { this.add(message, {theme: 'success', timeout: option.timeout, mark:option.mark } ) },
+    info   (message, option = {}) { this.add(message, {theme: 'info',    timeout: option.timeout, mark:option.mark } ) },
+    warning(message, option = {}) { this.add(message, {theme: 'warning', timeout: option.timeout, mark:option.mark } ) },
+    error  (message, option = {}) { this.add(message, {theme: 'error',   timeout: option.timeout, mark:option.mark } ) },
+    html   (message, option = {}) { this.add(message, {theme: option.theme, timeout: option.timeout, mark:option.mark, html:option.html } ) },
 
-    add (message, {theme, timeout, mark}) {
+    add (message, {theme, timeout, mark, html}) {
       if (!this.$parent) {
         this.$mount()
         document.body.appendChild(this.$el)
@@ -31,7 +33,7 @@ export default {
         key = mark
         this.search(mark)
       }
-      let item = {message, theme, key}
+      let item = { message, theme:'v-toast-'+theme, key, html}
       this.items.push(item)
       setTimeout( () => this.remove(item), timeout || this.timeout)
     },

@@ -1,20 +1,28 @@
 <template lang="pug">
 div.toaster-demo(style='text-align: center;')
   p
-    textarea(v-model='message')
-  p
-    select(v-model='theme', :class='{[theme]: true}')
+    textarea(v-model='message', style='width:100%;')
+  p HTML:
+    select(v-model='html',:class='{["v-toast-"+theme]: true}')
+      option(value='', selected="") false
+      option(value='true') true
+    span MARK:
+    select(v-model='mark',:class='{["v-toast-"+theme]: true}')
+      option(value='', selected="") false
+      option(value='1') true
+    select(v-model='theme', :class='{["v-toast-"+theme]: true}')
       option(value='') default
-      option(value='v-toast-info') info
-      option(value='v-toast-success') success
-      option(value='v-toast-warning') warning
-      option(value='v-toast-error') error
-    button.btn(@click='show', :class='{[theme]: true}') show
+      option(value='info') info
+      option(value='success') success
+      option(value='warning') warning
+      option(value='error') error
+    button.btn(@click='show', :class='{["v-toast-"+theme]: true}') show
   p
     button.btn.v-toast-info(@click='$toasterE.info(message, {})') info
     button.btn.v-toast-success(@click='$toasterE.success(message)') success
-    button.btn.v-toast-warning(@click='$toasterE.add(message, {theme:"v-toast-warning", mark:8})') warning
+    button.btn.v-toast-warning(@click='$toasterE.add(message, {theme:"warning", mark:8})') warning
     button.btn.v-toast-error(@click='$toasterE.error(message)') error
+    button.btn.v-toast-default(@click='$toasterE.html(message, {theme:"info", html:true})') html
 </template>
 
 <script>
@@ -25,13 +33,15 @@ Vue.use(Toaster)
 export default {
   data () {
     return {
-      theme: 'v-toast-info',
-      message: 'My Toaster message.',
+      theme: 'info',
+      message: 'My Toaster-Evolution message.',
+      html: '',
+      mark: '',
     }
   },
   methods: {
     show () {
-      this.$toasterE.add(this.message, {theme: this.theme,mark:6})
+      this.$toasterE.add(this.message, {theme:this.theme,mark:this.mark, html:this.html})
     },
   },
 }
