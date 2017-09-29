@@ -1,4 +1,5 @@
-v-toaster-evolution v-toaster-evolution
+v-toaster-evolution
+[![npm](https://img.shields.io/npm/v/v-toaster-evolution.svg?style=flat-square)](https://www.npmjs.com/package/v-toaster-evolution) [![Vue](https://img.shields.io/badge/vue-2.x-brightgreen.svg?style=flat-square)](https://vuejs.org/)
 
 v-toaster-evolution
 =========
