@@ -2,7 +2,7 @@
 .v-toaster-evolution
   transition-group(name='v-toast')
     .v-toast(:class="{[t.theme]: t.theme}", v-for='t in items', :key='t.key')
-      a.v-toast-btn-clear(@click='remove(t)')
+      a(:class="{[t.theme+'-btn-clear']: t.theme+'-btn-clear'}",@click='remove(t)')
       | {{t.message}}
 </template>
 
@@ -77,6 +77,28 @@ toast-varient-style(color)
   text-align center
   line-height 30px
 
+toast-btn-clear(color)
+  height 20px
+  width 20px
+  background transparent
+  border 0
+  color currentColor
+  opacity .45
+  text-decoration none
+  float right
+  cursor pointer
+  line-height 1.3
+  text-align center
+  &::before
+    content "\2715"
+  &:hover
+    opacity .85
+    border-radius 50px
+    box-shadow  0 0 0 2px #fff, 0 0 0 4px rgba(color, 0.4)
+    background-color color
+    color #FFF
+
+
 .v-toaster-evolution
   position fixed
   top 50px
@@ -87,7 +109,7 @@ toast-varient-style(color)
   padding-right 10px
   .v-toast
     margin-bottom 10px
-    transition all .3s ease
+    transition all .6s ease
     border 1px solid dark-color
     border-radius 3px
     color #444
@@ -119,19 +141,14 @@ toast-varient-style(color)
     &.v-toast-info
       &::before
         toast-varient-style(#5bc0de)
-
-    .v-toast-btn-clear
-      background transparent
-      border 0
-      color currentColor
-      opacity .45
-      text-decoration none
-      float right
-      cursor pointer
-      &:hover
-        opacity .85
-      &::before
-        content "\2715"
+    .v-toast-error-btn-clear
+        toast-btn-clear(#e85600)
+    .v-toast-warning-btn-clear
+        toast-btn-clear(#ffb700)
+    .v-toast-info-btn-clear
+        toast-btn-clear(#5bc0de)
+    .v-toast-success-btn-clear
+        toast-btn-clear(#32b643)
 @media (max-width: 300px)
   .v-toaster-evolution
     width 100%
