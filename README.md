@@ -50,7 +50,7 @@ Vue.use(ToasterE, {timeout: 5000})
 ### Usage example
 
 ```js
-// in your component this.$toaster
+// in your component this.$toasterE
 // ...
 this.$toasterE.success('Your toaster success message.')
 // or custom timeout
