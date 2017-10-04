@@ -57,7 +57,15 @@ export default {
 }
 </script>
 
-<style lang="stylus">
+<style lang="stylus" scoped>
+
+a
+  padding 0px
+  margin 0px
+span
+  padding 0px
+  margin 0px
+
 dark-color = #7b90ef
 toast-variant(color)
   background #fff
@@ -89,7 +97,7 @@ toast-btn-clear(color)
   text-decoration none
   float right
   cursor pointer
-  line-height 1.3
+  line-height 1.5
   text-align center
   &::before
     content "\2715"
@@ -116,7 +124,7 @@ toast-btn-clear(color)
     border-radius 3px
     color #444
     display block
-    padding 1rem
+    padding 10px 10px 10px 15px
     toast-variant(dark-color)
     &.v-toast-enter, &.v-toast-leave-to
       -webkit-transform translate(100%)

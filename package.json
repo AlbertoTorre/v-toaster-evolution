@@ -1,6 +1,6 @@
 {
   "name": "v-toaster-evolution",
-  "version": "1.0.8",
+  "version": "1.1.0",
   "description": "A Vue.js component - Notification",
   "author": "AlbertoTorre <albertochoatorres@gmail.com>",
   "main": "dist/v-toaster-evolution.js",
