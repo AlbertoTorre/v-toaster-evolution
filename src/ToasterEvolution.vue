@@ -58,14 +58,6 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-
-a
-  padding 0px
-  margin 0px
-span
-  padding 0px
-  margin 0px
-
 dark-color = #7b90ef
 toast-variant(color)
   background #fff
