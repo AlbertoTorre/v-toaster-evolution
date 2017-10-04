@@ -72,6 +72,9 @@ this.$toasterE.add('Hola, esto es una  <i>prueba</i>', {theme: 'info', timeout: 
 this.$toasterE.add('Load <i style="color:#cc0000;">prueba</i> ', {theme: 'warning', html:true})
 // ...
 ```
+Donate
+-------
+Bitcoin: 1Nic7wkZaseMdG9beuGPtTokAvxQ8VbkU7
 
 License
 -------
