@@ -17,10 +17,10 @@ export default {
     }
   },
   methods: {
-    success(message, option = {}) { this.add(message, {theme: 'success', timeout: option.timeout, mark:option.mark } ) },
-    info   (message, option = {}) { this.add(message, {theme: 'info',    timeout: option.timeout, mark:option.mark } ) },
-    warning(message, option = {}) { this.add(message, {theme: 'warning', timeout: option.timeout, mark:option.mark } ) },
-    error  (message, option = {}) { this.add(message, {theme: 'error',   timeout: option.timeout, mark:option.mark } ) },
+    success(message, option = {}) { this.add(message, {theme: 'success', timeout: option.timeout, mark:option.mark, html:option.html} ) },
+    info   (message, option = {}) { this.add(message, {theme: 'info',    timeout: option.timeout, mark:option.mark, html:option.html} ) },
+    warning(message, option = {}) { this.add(message, {theme: 'warning', timeout: option.timeout, mark:option.mark, html:option.html} ) },
+    error  (message, option = {}) { this.add(message, {theme: 'error',   timeout: option.timeout, mark:option.mark, html:option.html} ) },
     html   (message, option = {}) { this.add(message, {theme: option.theme, timeout: option.timeout, mark:option.mark, html:option.html } ) },
 
     add (message, {theme, timeout, mark, html}) {
