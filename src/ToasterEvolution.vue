@@ -73,11 +73,11 @@ toast-varient-style(color)
   left -6px
   color #fff
   content "!"
-  width 30px;
-  height 30px;
+  width 40px;
+  height 40px;
   border-radius 100%;
   text-align center
-  line-height 36px
+  line-height 41px
 
 toast-btn-clear(color)
   height 20px
@@ -115,7 +115,8 @@ toast-btn-clear(color)
     border-radius 3px
     color #444
     display block
-    padding 10px 10px 10px 20px
+    padding 10px 7px 18px 20px
+    font-weight bold
     toast-variant(dark-color)
     &.v-toast-enter, &.v-toast-leave-to
       -webkit-transform translate(100%)
