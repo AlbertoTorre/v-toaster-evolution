@@ -61,23 +61,23 @@ export default {
 dark-color = #7b90ef
 toast-variant(color)
   background #fff
-  border 1px solid color
-  border-left 6px solid color
+  border 3px solid color
+  border-left 8px solid color
 
 toast-varient-style(color)
   background-color alpha(color, 1)
-  font-size 20px
+  font-size 34px
   font-weight bold
   position absolute
-  margin-top -5px
-  left -2px
+  margin-top -3px
+  left -6px
   color #fff
   content "!"
   width 30px;
   height 30px;
   border-radius 100%;
   text-align center
-  line-height 30px
+  line-height 36px
 
 toast-btn-clear(color)
   height 20px
@@ -100,7 +100,6 @@ toast-btn-clear(color)
     background-color color
     color #FFF
 
-
 .v-toaster-evolution
   position fixed
   top 50px
@@ -116,7 +115,7 @@ toast-btn-clear(color)
     border-radius 3px
     color #444
     display block
-    padding 10px 10px 10px 15px
+    padding 10px 10px 10px 20px
     toast-variant(dark-color)
     &.v-toast-enter, &.v-toast-leave-to
       -webkit-transform translate(100%)
